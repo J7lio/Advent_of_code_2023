@@ -1,8 +1,6 @@
 import re
 import math
 
-maxs = [12, 13, 14]
-
 with open("bags.txt", "r") as f:
     res = []
     for line in f.readlines():
@@ -12,8 +10,8 @@ with open("bags.txt", "r") as f:
 
         for i in range(line.count(";")+1):
             part = line.split("; ")[i]
+            
             n_red = re.search(r"(\d+) red", part)
-
             if n_red:
                 n_red = n_red[1]
             else:
